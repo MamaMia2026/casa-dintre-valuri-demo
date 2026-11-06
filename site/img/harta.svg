@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Hartă schematică: Mamaia, între lacul Siutghiol și Marea Neagră">
+  <defs>
+    <pattern id="w" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8q10-6 20 0t20 0" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="800" height="600" fill="#eae6dc"/>
+  <!-- lacul Siutghiol -->
+  <path d="M0 0h250q40 120 10 230t30 230q20 80-20 140H0z" fill="#9cc3dc"/>
+  <path d="M0 0h250q40 120 10 230t30 230q20 80-20 140H0z" fill="url(#w)"/>
+  <!-- Marea Neagră -->
+  <path d="M800 0H560q-50 150-20 300t-40 300h300z" fill="#1f6fa8"/>
+  <path d="M800 0H560q-50 150-20 300t-40 300h300z" fill="url(#w)"/>
+  <!-- plaja -->
+  <path d="M560 0q-50 150-20 300t-40 300h-34q66-150 36-300T526 0z" fill="#f2dfb4"/>
+  <!-- bulevard -->
+  <path d="M395 0q-20 150 0 300t-10 300" fill="none" stroke="#ffffff" stroke-width="16"/>
+  <path d="M395 0q-20 150 0 300t-10 300" fill="none" stroke="#d8d1c1" stroke-width="2" stroke-dasharray="10 10"/>
+  <!-- străzi -->
+  <g stroke="#ffffff" stroke-width="7" fill="none"><path d="M290 140h245"/><path d="M285 330h258"/><path d="M300 470h220"/></g>
+  <!-- clădiri -->
+  <g fill="#d9d2c2"><rect x="300" y="60" width="70" height="60" rx="6"/><rect x="420" y="70" width="80" height="50" rx="6"/><rect x="305" y="170" width="60" height="70" rx="6"/><rect x="310" y="370" width="60" height="70" rx="6"/><rect x="420" y="380" width="80" height="60" rx="6"/><rect x="310" y="500" width="60" height="60" rx="6"/><rect x="420" y="500" width="70" height="70" rx="6"/></g>
+  <!-- pin -->
+  <rect x="420" y="190" width="90" height="80" rx="8" fill="#12304d"/>
+  <g transform="translate(465 190)">
+    <path d="M0 0c-22 0-38-16-38-37s17-37 38-37 38 16 38 37S22 0 0 0z" fill="#1f6fa8" transform="translate(0 -10)"/>
+    <path d="M0 0l-12-16h24z" fill="#1f6fa8" transform="translate(0 -2)"/>
+    <circle cx="0" cy="-47" r="13" fill="#f7f4ee"/>
+  </g>
+  <g font-family="Manrope, Arial, sans-serif" fill="#12304d">
+    <text x="465" y="300" text-anchor="middle" font-size="19" font-weight="700">Casa dintre Valuri</text>
+    <text x="40" y="300" font-size="20" font-weight="600" fill="#12304d" transform="rotate(-90 40 300)" text-anchor="middle">Lacul Siutghiol</text>
+    <text x="700" y="300" font-size="22" font-weight="600" fill="#ffffff" transform="rotate(90 700 300)" text-anchor="middle">Marea Neagră</text>
+    <text x="408" y="590" font-size="13" fill="#566a7e" transform="rotate(-88 408 590)">Bd. Mamaia</text>
+    <text x="535" y="230" font-size="14" font-weight="600" fill="#12304d">plajă</text>
+    <text x="535" y="248" font-size="14" fill="#12304d">2 min</text>
+  </g>
+  <text x="20" y="585" font-family="Manrope, Arial, sans-serif" font-size="12" fill="#12304d" fill-opacity=".6">Schiță orientativă · exemplu</text>
+</svg>

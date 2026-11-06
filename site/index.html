@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Casa dintre Valuri — Pensiune la mare · Mamaia</title>
+<meta name="description" content="Casa dintre Valuri, pensiune în Mamaia, între mare și lacul Siutghiol. Machetă demo cu calendar de disponibilitate și cerere de rezervare.">
+<meta name="theme-color" content="#12304d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312304d'/%3E%3Cpath d='M5 19q5-5 11 0t11 0v8H5z' fill='%231f6fa8'/%3E%3Cpath d='M5 15q5-5 11 0t11 0' fill='none' stroke='%23f7f4ee' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/dmserif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/v1-9x16.webp" media="(max-width:900px) and (orientation:portrait)" fetchpriority="high">
+<link rel="preload" as="image" href="img/v1.webp" media="not all and (max-width:900px) and (orientation:portrait)" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="demo-bar" role="note">Machetă demo – prețuri, disponibilitate și date de exemplu</div>
+
+<nav id="nav" aria-label="Meniu principal"><a class="logo" href="#">Casa dintre Valuri</a><ul><li><a href="#camere">Camere</a></li><li><a href="#disponibilitate">Disponibilitate</a></li><li><a href="#facilitati">Facilități</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#locatie">Locație</a></li></ul><a class="btn sm" href="#disponibilitate">Rezervă</a></nav>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:900px) and (orientation:portrait)" srcset="img/v1-9x16.webp">
+    <img src="img/v1.webp" alt="" width="1280" height="720" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  </picture>
+  <video muted loop playsinline preload="none" aria-hidden="true">
+    <source data-src="img/v1.webm" data-src-portrait="img/v1-9x16.webm" type="video/webm">
+    <source data-src="img/v1.mp4" data-src-portrait="img/v1-9x16.mp4" type="video/mp4">
+  </video>
+  <div class="ht"><div class="k">Pensiune la mare · Mamaia</div><h1>Casa dintre Valuri</h1><p>Între mare și lacul Siutghiol: răsărit pe terasă, nisip la doi pași și valuri care te adorm.</p><div class="btns"><a class="btn" href="#disponibilitate">Verifică disponibilitatea</a><a class="btn line" href="#camere">Vezi camerele</a></div></div>
+  <div class="scroll" aria-hidden="true">Derulează ↓</div>
+</header>
+
+<form class="book" id="rezervare" aria-label="Rezervare rapidă">
+  <label class="f">Sosire<input type="date" id="in" required></label>
+  <label class="f">Plecare<input type="date" id="out" required></label>
+  <label class="f">Adulți<select data-k="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+  <label class="f">Copii<select data-k="kids"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></label>
+  <label class="f room-f">Camera<select data-k="room"></select></label>
+  <button class="btn" type="submit">Vezi calendarul</button>
+  <div class="total" aria-live="polite"><span id="nights">Alege datele</span><span>Total estimat: <b id="sum">alege datele</b></span></div>
+</form>
+
+<section id="camere">
+  <div class="k2 rv">Camere</div><h2 class="rv">Alege-ți camera.</h2>
+  <div class="rooms">
+    <article class="room rv"><img src="img/i1.webp" alt="Camera Scoică: pat dublu și balcon deschis spre mare" width="1200" height="896" loading="lazy" decoding="async"><div class="rb"><h3>Camera Scoică</h3><p>2 persoane · balcon spre mare</p><div class="rp"><b>340 lei</b><span>/ noapte</span></div><button type="button" class="btn sm" data-room="0">Rezervă camera</button></div></article>
+    <article class="room rv"><img src="img/i2.webp" alt="Camera Far: decor marin, hublou cu vedere spre far" width="1200" height="896" loading="lazy" decoding="async"><div class="rb"><h3>Camera Far</h3><p>2 persoane · stil marin</p><div class="rp"><b>300 lei</b><span>/ noapte</span></div><button type="button" class="btn sm" data-room="1">Rezervă camera</button></div></article>
+    <article class="room rv"><img src="img/i3.webp" alt="Apartament Faleză: terasă privată cu mic dejun și vedere la mare" width="1200" height="896" loading="lazy" decoding="async"><div class="rb"><h3>Apartament Faleză</h3><p>4 persoane · terasă privată</p><div class="rp"><b>560 lei</b><span>/ noapte</span></div><button type="button" class="btn sm" data-room="2">Rezervă camera</button></div></article>
+  </div>
+</section>
+
+<section id="disponibilitate" aria-labelledby="dispH">
+  <div class="k2 rv">Disponibilitate</div><h2 class="rv" id="dispH">Nopțile libere.</h2>
+  <p class="lead">Alege ziua sosirii, apoi ziua plecării. Sub fiecare zi vezi prețul pe noapte pentru camera aleasă; zilele tăiate sunt deja ocupate.</p>
+  <div class="avail">
+    <div class="calbox">
+      <div class="cal-top"><p>Calendar pentru <b id="calRoom">Camera Scoică</b></p><div class="navm"><button type="button" id="prevM" aria-label="Luna anterioară">‹</button><button type="button" id="nextM" aria-label="Luna următoare">›</button></div></div>
+      <div id="cal"></div>
+      <p class="cal-note" id="calNote" aria-live="polite"></p>
+      <ul class="legend"><li><i class="l-free"></i>Liber · preț / noapte</li><li><i class="l-busy"></i>Ocupat</li><li><i class="l-sel"></i>Sejurul tău</li></ul>
+      <div class="seasons">
+        <div><b>Extrasezon −30%</b>octombrie – aprilie · minimum 2 nopți dacă include vineri sau sâmbătă</div>
+        <div><b>Sezon · preț de bază</b>mai, iunie, septembrie · minimum 2 nopți dacă include vineri sau sâmbătă</div>
+        <div class="sv"><b>Vârf de sezon +40%</b>iulie – august · minimum 3 nopți</div>
+      </div>
+      <span class="ex-tag">Prețuri și zile ocupate de exemplu</span>
+    </div>
+
+    <aside class="sum-card" id="sCard" aria-labelledby="rezumat">
+      <h3 id="rezumat" tabindex="-1">Rezumatul cererii</h3>
+      <p class="rm" id="sRoom"></p>
+      <div class="sum-grid">
+        <label class="f room-f">Camera<select data-k="room"></select></label>
+        <label class="f">Adulți<select data-k="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label class="f">Copii<select data-k="kids"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></label>
+      </div>
+      <div class="dates"><div><span>Sosire</span><b id="sIn">—</b></div><div><span>Plecare</span><b id="sOut">—</b></div><div><span>Nopți</span><b id="sN">—</b></div></div>
+      <fieldset class="extras"><legend>Extra (prețuri exemplu)</legend>
+        <label class="chk"><input type="checkbox" data-ex="mic"><span>Mic dejun pe terasă<small id="micNote"></small></span></label>
+        <label class="chk"><input type="checkbox" data-ex="pat"><span>Pat suplimentar<small id="patNote"></small></span></label>
+        <label class="chk"><input type="checkbox" data-ex="parc"><span>Parcare<small id="parcNote"></small></span></label>
+        <label class="chk"><input type="checkbox" data-ex="animal"><span>Animal de companie<small id="animalNote"></small></span></label>
+      </fieldset>
+      <div id="sMsgs" aria-live="polite"></div>
+      <div id="sCalc">
+        <table class="lines"><caption class="sr">Defalcarea prețului</caption><tbody id="sLines"></tbody></table>
+        <div class="tot">
+          <div class="big"><span>Total estimat</span><span id="sTotal">—</span></div>
+          <div class="sm"><span>Avans 30% (după confirmare)</span><span id="sAvans">—</span></div>
+          <div class="sm"><span>Rest la sosire</span><span id="sRest">—</span></div>
+        </div>
+      </div>
+      <div class="actions" id="sActions">
+        <button type="button" class="btn" id="sendBtn">Trimite cererea</button>
+        <a class="btn wa" id="wa" href="#rezumat" target="_blank" rel="noopener">Trimite pe WhatsApp</a>
+      </div>
+
+      <form id="cerere" name="rezervare" method="POST" action="/multumim.html" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="rezervare">
+        <p class="sr"><label>Nu completa acest câmp: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="camera"><input type="hidden" name="sosire"><input type="hidden" name="plecare"><input type="hidden" name="nopti">
+        <input type="hidden" name="adulti"><input type="hidden" name="copii"><input type="hidden" name="extra"><input type="hidden" name="defalcare">
+        <input type="hidden" name="total"><input type="hidden" name="avans">
+        <label class="f">Nume<input name="nume" autocomplete="name" required></label>
+        <label class="f">Telefon<input name="telefon" type="tel" autocomplete="tel" inputmode="tel" pattern="\+?[0-9 ]{9,}" title="Un număr de telefon, ex. 0722 123 456" required></label>
+        <label class="f">Email<input name="email" type="email" autocomplete="email" required></label>
+        <label class="f">Mesaj (opțional)<textarea name="mesaj" rows="3" placeholder="Ora aproximativă a sosirii, întrebări…"></textarea></label>
+        <p class="form-err" id="formErr" hidden>Cererea nu a putut fi trimisă. Încearcă din nou sau trimite-o pe WhatsApp.</p>
+        <button class="btn" type="submit">Trimite cererea de rezervare</button>
+        <p class="fine">Nu plătești nimic acum și nu îți cerem date de card. Gazda confirmă disponibilitatea și îți trimite detaliile pentru avans.</p>
+      </form>
+
+      <div id="thanks" tabindex="-1" role="status" hidden>
+        <h4>Mulțumim, <span id="thName"></span>!</h4>
+        <p>Am primit cererea ta: <span id="thSum"></span> Te contactăm în cel mult 24 de ore pentru confirmare.</p>
+        <button type="button" class="btn sm line" id="again">Fă o altă cerere</button>
+      </div>
+      <p class="fine">Prețurile sunt orientative (exemplu). Rezervarea devine fermă după confirmarea gazdei și plata avansului.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="facilitati"><div class="k2 rv">Facilități</div><h2 class="rv">Tot ce ai nevoie.</h2><ul class="fac rv"><li>Plajă la 2 minute</li><li>Șezlonguri incluse</li><li>Mic dejun pe terasă</li><li>Parcare</li><li>Wi-Fi</li><li>Grătar în curte</li></ul></section>
+
+<section id="galerie"><div class="k2 rv">Galerie</div><h2 class="rv">Locul, în imagini.</h2>
+  <div class="gal rv">
+    <button type="button" class="g" data-full="img/v1.webp" aria-label="Mărește imaginea: Mamaia, între mare și lacul Siutghiol"><img src="img/v1.webp" alt="Mamaia la apus, între mare și lacul Siutghiol" width="1280" height="720" loading="lazy" decoding="async"></button>
+    <button type="button" class="g" data-full="img/i1.webp" aria-label="Mărește imaginea: Camera Scoică"><img src="img/i1.webp" alt="Camera Scoică, cu balcon spre mare" width="1200" height="896" loading="lazy" decoding="async"></button>
+    <button type="button" class="g" data-full="img/i2.webp" aria-label="Mărește imaginea: Camera Far"><img src="img/i2.webp" alt="Camera Far, în stil marin" width="1200" height="896" loading="lazy" decoding="async"></button>
+    <button type="button" class="g" data-full="img/i3.webp" aria-label="Mărește imaginea: terasa Apartamentului Faleză"><img src="img/i3.webp" alt="Mic dejun pe terasa Apartamentului Faleză, la răsărit" width="1200" height="896" loading="lazy" decoding="async"></button>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galerie foto" hidden>
+  <div class="lb-stage"><img id="lbImg" alt=""></div>
+  <p id="lbCap"></p>
+  <button type="button" id="lbPrev" aria-label="Imaginea anterioară">‹</button>
+  <button type="button" id="lbNext" aria-label="Imaginea următoare">›</button>
+  <button type="button" id="lbClose" aria-label="Închide galeria">✕</button>
+</div>
+
+<section class="rev-sec" aria-labelledby="revH"><div class="k2 rv">Recenzii</div><h2 class="rv" id="revH">Ce spun oaspeții.</h2>
+  <p class="ex-note">Exemple – se înlocuiesc cu recenziile reale</p>
+  <div class="rev"><blockquote class="rv">„Am dormit ca niciodată. Revenim sigur.”<cite>— Oaspete, exemplu</cite></blockquote><blockquote class="rv">„Gazde minunate, mic dejun excelent.”<cite>— Oaspete, exemplu</cite></blockquote><blockquote class="rv">„Locul perfect pentru un weekend liniștit.”<cite>— Oaspete, exemplu</cite></blockquote></div>
+</section>
+
+<section id="locatie"><div class="loc"><div class="rv"><div class="k2">Locație</div><h2>Ușor de ajuns, greu de plecat.</h2><p style="color:var(--muted)">Adresa pensiunii · Telefon · Email<br>Check-in 14:00 · Check-out 11:00</p><div class="btns"><a class="btn" href="#disponibilitate">Rezervă acum</a><a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Mamaia%2C%20Constan%C8%9Ba" target="_blank" rel="noopener">Deschide în Google Maps</a></div></div>
+  <a class="map rv" href="https://www.google.com/maps/search/?api=1&amp;query=Mamaia%2C%20Constan%C8%9Ba" target="_blank" rel="noopener"><img src="img/harta.svg" alt="Hartă schematică: pensiunea în Mamaia, între lacul Siutghiol și Marea Neagră, la 2 minute de plajă" width="800" height="600" loading="lazy"><span>Deschide în Google Maps ↗</span></a></div></section>
+
+<footer><span>Casa dintre Valuri · Machetă demo · Site realizat de CristianWeb</span><a href="https://cristianweb.ro" target="_blank" rel="noopener">Vreau un site ca acesta →</a></footer>
+
+<div class="mbar" id="mbar"><p id="mbarTxt"></p><button type="button" class="btn" id="mbarBtn">Vezi nopțile libere</button></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
